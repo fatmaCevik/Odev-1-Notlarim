@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    //"[SerializeField] private PlayerHealth playerHealth;"
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
+        PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (playerHealth == null)
+            return;
+
+        playerHealth.Crash();
     }
 }

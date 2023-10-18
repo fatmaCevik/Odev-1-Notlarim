@@ -627,6 +627,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedAsteroid
       objectReference: {fileID: 0}
+    - target: {fileID: 3349159623874106316, guid: e9c3126ad29da7f4baa112f466e3c025,
+        type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1704808154}
     - target: {fileID: 5110589034390623641, guid: e9c3126ad29da7f4baa112f466e3c025,
         type: 3}
       propertyPath: m_LocalPosition.x
