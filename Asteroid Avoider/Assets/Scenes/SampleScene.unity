@@ -550,6 +550,7 @@ MonoBehaviour:
   rb: {fileID: 1704808153}
   forceMagnitude: 850
   maxVelocity: 6
+  rotationSpeed: 3
 --- !u!54 &1704808153
 Rigidbody:
   m_ObjectHideFlags: 0
