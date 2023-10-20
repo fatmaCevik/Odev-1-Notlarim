@@ -13,4 +13,9 @@ public class Asteroid : MonoBehaviour
         playerHealth.Crash();
         //playerHealth.RemainingLife();
     }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
 }
