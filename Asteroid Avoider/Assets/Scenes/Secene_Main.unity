@@ -5107,7 +5107,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 309553153}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1879872647}
+        m_TargetAssemblyTypeName: GameOverHandler, Assembly-CSharp
+        m_MethodName: ContinueButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &309553153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6720,6 +6732,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0edc804c2c6e24b883574579c442a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1704808150}
+  continueButton: {fileID: 309553152}
   gameOverText: {fileID: 1626234240}
   scoreSystem: {fileID: 1249276903}
   gameOverDisplay: {fileID: 2075836633}
