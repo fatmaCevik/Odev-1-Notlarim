@@ -12,8 +12,8 @@ public class AdManager : MonoBehaviour, IUnityAdsInitializationListener, IUnityA
     public static AdManager Instance;
 
     private string gameId;
-    private string adUnitId;
-    private GameOverHandler gameOverHandler;
+    public string adUnitId;
+    public GameOverHandler gameOverHandler;
 
     private void Awake()
     {
@@ -63,7 +63,7 @@ public class AdManager : MonoBehaviour, IUnityAdsInitializationListener, IUnityA
     public void OnUnityAdsAdLoaded(string placementId)
     {
         //throw new System.NotImplementedException();
-        Advertisement.Show(placementId, this);    
+        Advertisement.Show(placementId, this);
     }
 
     public void OnUnityAdsFailedToLoad(string placementId, UnityAdsLoadError error, string message)

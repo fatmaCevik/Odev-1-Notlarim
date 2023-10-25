@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Advertisements;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -20,6 +21,10 @@ public class GameOverHandler : MonoBehaviour
         gameOverText.text = $"Your score: {finalScore}";
 
         gameOverDisplay.gameObject.SetActive(true);
+
+        int adsShown = PlayerPrefs.GetInt("AdsShown", 0);
+        adsShown++;
+        PlayerPrefs.SetInt("AdsShown", adsShown);
     }
 
     public void PlayAgain()
@@ -29,7 +34,8 @@ public class GameOverHandler : MonoBehaviour
 
     public void ContinueButton()
     {
-        AdManager.Instance.ShowAd(this);
+        if (AdManager.Instance != null)
+            AdManager.Instance.ShowAd(this);
         continueButton.interactable = false;
     }
 
