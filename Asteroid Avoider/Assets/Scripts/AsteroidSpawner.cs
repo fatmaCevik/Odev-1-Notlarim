@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AsteroidSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject[] asteriodPrefabs;
+    [SerializeField] private GameObject[] asteroidPrefabs;
     [SerializeField] private float secondsBetweenAsteroid = 1.5f;
     [SerializeField] private Vector2 forceRange;
 
@@ -14,7 +14,7 @@ public class AsteroidSpawner : MonoBehaviour
         mainCamera = Camera.main;
     }
 
-    void Update()
+    private void Update()
     {
         timer -= Time.deltaTime; //Her karede azalmaya devam edecek.
         if(timer <= 0) //Eðer koþul saðlanýrsa yeni bir asteroitte doðmak istiyoruz.
@@ -64,7 +64,7 @@ public class AsteroidSpawner : MonoBehaviour
         Vector3 worldSpawnPoint = mainCamera.ViewportToWorldPoint(spawnPoint);
         worldSpawnPoint.z = 0; // 0 = false anlamýnda kullanýlýyor. 
         //mainCamera.ViewportToWorldPoint(spawnPoint); bize asteroitin nerede ortaya çýkacaðýný söyleyen serbest bir vektör verecek.
-        GameObject selectedAsteroid = asteriodPrefabs[Random.Range(0, asteriodPrefabs.Length)];
+        GameObject selectedAsteroid = asteroidPrefabs[Random.Range(0, asteroidPrefabs.Length)];
         GameObject asteroidInstance = Instantiate(
             selectedAsteroid,
             worldSpawnPoint,

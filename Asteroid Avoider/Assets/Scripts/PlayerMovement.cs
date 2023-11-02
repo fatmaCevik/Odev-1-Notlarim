@@ -33,7 +33,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void ProcessInput()
     {
-
         if (Touchscreen.current.primaryTouch.press.isPressed)
         {
             Vector2 touchPosition = Touchscreen.current.primaryTouch.position.ReadValue();
